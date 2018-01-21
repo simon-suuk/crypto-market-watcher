@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./partials/head.ejs %>
+</head>
+<body class="container">
+
+<header>
+    <% include ./partials/header.ejs %>
+</header>
+
+<main>
+    <p>
+        ID: <%= user.id %><br/>
+        Username: <%= user.username %><br/>
+        Name: <%= user.displayName %><br/>
+        <% if (user.emails) { %>
+        Email: <%= user.emails[0].value %><br/>
+        <% } %>
+    </p>
+</main>
+
+<footer class="footer">
+    <% include ./partials/footer.ejs %>
+</footer>
+
+</body>
+</html>

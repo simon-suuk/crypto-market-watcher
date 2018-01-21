@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./partials/head.ejs %>
+</head>
+<body class="container">
+
+<header>
+    <!--% include ./partials/header.ejs %-->
+</header>
+
+<main>
+
+
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Exchange</th>
+            <th>High(BTC/USD)</th>
+            <th>Low(BTC/USD)</th>
+            <th>Bid(BTC/USD)</th>
+            <th>Ask(BTC/USD)</th>
+        </tr>
+
+        <tr>
+            <td>Kraken</td>
+            <td><%= kr_data.high %></td>
+            <td><%= kr_data.low %></td>
+            <td><%= kr_data.bid %></td>
+            <td><%= kr_data.ask %></td>
+        </tr>
+
+        <tr>
+            <td>Bitfinex</td>
+            <td><%= bf_data.high %></td>
+            <td><%= bf_data.low %></td>
+            <td><%= bf_data.bid %></td>
+            <td><%= bf_data.ask %></td>
+        </tr>
+
+        <tr>
+            <td>Okcoinusd</td>
+            <td><%= okc_data.high %></td>
+            <td><%= okc_data.low %></td>
+            <td><%= okc_data.bid %></td>
+            <td><%= okc_data.ask %></td>
+        </tr>
+    </table>
+</main>
+
+<footer class="footer">
+    <% include ./partials/footer.ejs %>
+</footer>
+
+</body>
+</html>

@@ -18,13 +18,18 @@
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "morgan": "^1.8.2",
-    "serve-favicon": "^2.4.3"
+    "serve-favicon": "^2.4.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "connect-ensure-login": "^0.1.1",
+    "express-session": "^1.11.3",
+    "ccxt": "^1.10.789"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "chai": "^4.1.1",
     "chai-http": "^3.0.0",
-    "eslint": "^4.5.0",
+    "eslint": "^4.16.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",

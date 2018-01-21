@@ -4,9 +4,11 @@ import Debug from 'debug';
 import express from 'express';
 import logger from 'morgan';
 import path from 'path';
+import passport from 'passport';
 // import favicon from 'serve-favicon';
 
 import index from './routes/index';
+
 
 const app = express();
 const debug = Debug('crypto-martket-watcher:app');
@@ -24,6 +26,13 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(require('express-session')({secret: 'keyboard cat', resave: false, saveUninitialized: false}));
+
+// Initialize Passport and restore authentication state, if any, from the
+// session.
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', index);
 
